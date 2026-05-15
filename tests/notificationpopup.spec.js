@@ -1,5 +1,7 @@
 import {expect, test} from "@playwright/test"
 import { permission } from "node:process"
+
+test.use({permissions:["notifications"]})
 test("notification pop up",async ({browser})=>{
 
      let context= await browser.newContext()
